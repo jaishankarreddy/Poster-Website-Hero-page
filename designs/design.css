@@ -1,0 +1,117 @@
+.main {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.255);
+}
+
+
+.main .circle{
+    margin: 30px;
+    border-radius: 50%;
+    height: 35vw;
+    width: 43%;
+    animation-duration: 3s;
+    animation-name: circl;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    overflow: hidden;
+    position:absolute;
+    
+}
+
+
+@keyframes circle {
+    from {
+        transform: skew(10deg);
+    }
+
+    to {
+        transform:skew(-10deg);
+    }
+
+}
+
+
+.circle .moving {
+    border-radius: 50px;
+    margin-top: 100px;
+    rotate: 90deg;
+    height: 57%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    position: relative;
+
+}
+
+.container1 {
+   
+    height: 50%;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+
+}
+
+.container1 .up {
+    background: linear-gradient(to right, #FFC334, #FF830A);
+    height: 100%;
+    min-width: 35%;
+    position: relative;
+    margin-right: 15px;
+    border-radius: 15px;
+    animation-name: up_animation;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+
+.container2 {
+ 
+    height: 50%;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    margin-top: 0.8vw;
+}
+
+
+.container2 .down {
+    background: linear-gradient(to right, #FFC334, #FF830A);
+    height: 100%;
+    min-width: 35%;
+    position: relative;
+    margin-right: 15px;
+    border-radius: 15px;
+    animation-name: down_animation;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+
+@keyframes up_animation {
+    from {
+        transform: translate(0);
+    }
+
+    to {
+        transform: translate(-100%);
+
+    }
+}
+
+@keyframes down_animation {
+    from {
+        transform: translate(-100%);
+    }
+
+    to {
+        transform: translate(0);
+
+    }
+}
+
